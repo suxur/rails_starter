@@ -1,0 +1,7 @@
+<% content_for :content do %>
+  <h2 class="font-display text-4xl text-violet-100"><%= yield :title %></h2>
+  <div class="w-full sm:w-96 mt-4 text-zinc-50">
+    <%= yield %>
+  </div>
+<% end %>
+<%= render template: "layouts/application" %>

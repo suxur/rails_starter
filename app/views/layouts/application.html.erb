@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="h-full">
+  <head>
+    <title>Rails Starter</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <%= javascript_importmap_tags %>
+    <script src="https://kit.fontawesome.com/2f76fad117.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="h-full bg-violet-950 relative">
+    <main class="bg-violet-950 flex flex-col justify-center items-center h-full w-full">
+      <%= content_for?(:content) ? yield(:content) : yield %>
+    </main>
+  </body>
+</html>

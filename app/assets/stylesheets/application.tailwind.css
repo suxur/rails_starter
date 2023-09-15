@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [type="checkbox"],
+  [multiple],
+  textarea,
+  select {
+    @apply text-black focus:ring-black
+  }
+
+  [readonly] {
+    @apply bg-zinc-300
+  }
+
+  select {
+    @apply md:m-0 bg-zinc-900 text-zinc-50 rounded-md border-zinc-800 focus:ring-black focus:border-transparent py-1
+  }
+
+}
+
+@layer components {
+  .button {
+    @apply justify-center inline-flex items-center px-4 py-2 border rounded-md font-semibold text-xs uppercase tracking-widest transition ease-in-out duration-150 focus:outline-none disabled:opacity-25 cursor-pointer bg-white text-zinc-50 border-transparent hover:bg-red-600 active:bg-red-600
+  }
+}
+
+.pagy-nav,
+.pagy-nav-js {
+  @apply flex space-x-2;
+}
+
+.pagy-nav .page a,
+.pagy-nav .page.active,
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page a,
+.pagy-nav-js .page.active,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  @apply block rounded px-4 py-2 text-sm text-zinc-100 font-semibold bg-zinc-900 hover:bg-zinc-800 hover:text-zinc-200;
+}
+
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  @apply text-zinc-400 cursor-default hover:bg-zinc-900 hover:text-zinc-400;
+}
+
+.pagy-nav .page.active,
+.pagy-nav-js .page.active {
+  @apply text-zinc-50 cursor-default bg-white hover:bg-red-600 hover:text-zinc-50;
+}

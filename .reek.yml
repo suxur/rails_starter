@@ -1,0 +1,9 @@
+detectors:
+  IrresponsibleModule:
+    enabled: false
+
+exclude_paths:
+  - db/seeds
+  - db/migrate
+  - test
+  - app/form_builders
